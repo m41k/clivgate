@@ -14,8 +14,8 @@ on(){
 	--width="200" \
 	--window-icon='network-vpn' \
 	--image=edit-find-symbolic \
-	--text="<b>Searching servers.</b>" \
-	--progress-text="Now loading..." \
+	--text="<b>Searching Servers...</b>" \
+	--progress-text="wait please" \
 	--no-buttons \
 	--pulsate \
 	--auto-close \
@@ -43,7 +43,7 @@ off(){
 	 --text-align='center' \
 	 --text="<small>Created by: github.com/m41k</small>" \
 	 --buttons-layout='center' \
-	 --button='Disconnect':0\
+	 --button='Disconnect':0
 	   if [ $? -eq 0 ]; then
 	      killall openvpn &
 	   fi
