@@ -7,8 +7,8 @@
 #---------------------------------------#
 
 on(){
-	rm -f servers 2> /dev/null
-	wget www.vpngate.net/api/iphone/ -O servers 2>&1 |
+	rm -f /tmp/servers 2> /dev/null
+	wget www.vpngate.net/api/iphone/ -O /tmp/servers 2>&1 |
 	yad --progress \
 	--title="CliVGate" \
 	--width=200 \
@@ -21,7 +21,7 @@ on(){
 	--auto-close \
 	--auto-kill
 
-	LISTA=( `tail -n +3 servers | cut -s -d "," -f2,7 | while read LINHA; do echo "$LINHA"; done `)
+	LISTA=( `tail -n +3 /tmp/servers | cut -s -d "," -f2,7 | while read LINHA; do echo "$LINHA"; done `)
 
 	SEASE=$(yad --entry --width=200 --title="CliVGATE" \
 	 --window-icon='network-vpn' \
@@ -31,9 +31,9 @@ on(){
 	 --button="Connect" )
 	SERVER=( `echo $SEASE | cut -d"," -f1` )
 
-	cat servers | grep $SERVER | cut -d"," -f15 | base64 -d > cfov 2> /dev/null
+	cat servers | grep $SERVER | cut -d"," -f15 | base64 -d > /tmp/cfov 2> /dev/null
 
-	openvpn --config cfov &
+	openvpn --config /tmp/cfov &
 	tray
 	}
 
