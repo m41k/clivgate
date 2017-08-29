@@ -28,7 +28,7 @@ on(){
 	 --text="<b>Select a server:</b>" \
 	 --entry-text \
 	 ${LISTA[@]}  \
-	 --button='Connect' )
+	 --button="Connect" )
 	SERVER=( `echo $SEASE | cut -d"," -f1` )
 
 	cat servers | grep $SERVER | cut -d"," -f15 | base64 -d > cfov 2> /dev/null
@@ -43,7 +43,7 @@ off(){
 	 --text-align='center' \
 	 --text="<small>Created by: github.com/m41k</small>" \
 	 --buttons-layout='center' \
-	 --button='Disconnect'
+	 --button="Disconnect"
 	   if [ $? -eq 0 ]; then
 	      killall openvpn &
 	   fi
