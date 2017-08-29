@@ -14,7 +14,7 @@ on(){
 	--width="200" \
 	--window-icon='network-vpn' \
 	--image=edit-find-symbolic \
-	--text="<b>Searching Servers...</b>" \
+	--text="<b>Loading server list...</b>" \
 	--progress-text="wait please" \
 	--no-buttons \
 	--pulsate \
