@@ -44,7 +44,6 @@ off(){
 	 --text="<small>Created by: github.com/m41k</small>" \
 	 --buttons-layout='center' \
 	 --button='Disconnect':0\
-	 teste
 	   if [ $? -eq 0 ]; then
 	      killall openvpn &
 	   fi
