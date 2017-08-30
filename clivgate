@@ -31,7 +31,7 @@ on(){
 	 --button="Connect" )
 	SERVER=( `echo $SEASE | cut -d"," -f1` )
 
-	cat servers | grep $SERVER | cut -d"," -f15 | base64 -d > /tmp/cfov 2> /dev/null
+	cat /tmp/servers | grep $SERVER | cut -d"," -f15 | base64 -d > /tmp/cfov 2> /dev/null
 
 	openvpn --config /tmp/cfov &
 	tray
