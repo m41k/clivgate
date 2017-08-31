@@ -6,4 +6,4 @@ yad
 openvpn
 
 install.sh
-Automated installation. Tested on Debian and Kurupira OS.
+Automated installation. Tested on Ubuntu, Debian and Kurupira OS.
