@@ -56,6 +56,7 @@ tray(){
 	off
 }
 
+#JCN TIPS
 if  ifconfig | grep tun; then
   off
 fi
