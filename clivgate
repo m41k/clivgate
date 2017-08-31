@@ -56,10 +56,9 @@ tray(){
 	off
 }
 
-ifconfig | grep tun
- if [ $? -eq 0 ]; then
+if  ifconfig | grep tun; then
   off
- fi
+fi
 
 case $1 in
 	off)off
