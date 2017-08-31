@@ -1,5 +1,5 @@
 # clivgate
-Client GUI VPN GATE
+GUI Client VPN GATE
 
 Dependencies:
 yad
